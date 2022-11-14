@@ -2,11 +2,27 @@
   "name": "client",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "private": "true",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "webpack --mode development",
+    "dev": "webpack-dev-server",
+    "start": "webpacl --watch"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.20.2",
+    "@babel/preset-env": "^7.20.2",
+    "@popperjs/core": "^2.11.6",
+    "babel-loader": "^9.1.0",
+    "bootstrap": "^5.2.2",
+    "css-loader": "^6.7.2",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.5.0"
+  }
 }
