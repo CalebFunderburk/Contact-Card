@@ -5,6 +5,7 @@ const { InjectManifest } = require('workbox-webpack-plugin')
 const WebpackPwaManifest = require('webpack-pwa-manifest')
 
 module.exports = {
+    mode: 'production',
     entry: './src/js/index.js',
     output: {
         filename: 'bundle.js',
