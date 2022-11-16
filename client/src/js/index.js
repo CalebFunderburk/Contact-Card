@@ -10,8 +10,6 @@ import { fetchCards } from './cards'
 import { toggleForm, clearForm } from './form'
 import { initDb, getDb, postDb, deleteDb, editDb } from './database'
 
-const installBtn = document.getElementById('installBtn')
-
 if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
         navigator.serviceWorker.register('./service-worker.js')
@@ -89,6 +87,8 @@ window.editCard = (e) => {
 
     submitBtnToUpdate = true
 }
+
+const installBtn = document.getElementById('installBtn')
 
 window.addEventListener('beforeimstallprompt', (events) => {
     event.preventDefault()
