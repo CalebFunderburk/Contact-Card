@@ -5,9 +5,16 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 import Logo from '../images/logo.png'
 import Bear from '../images/bear.png'
 import Dog from '../images/dog.png'
+import Unused from '../images/unused-image.png'
 import { fetchCards } from './cards'
 import { toggleForm, clearForm } from './form'
 import { initDb, getDb, postDb, deleteDb, editDb } from './database'
+
+if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./service-worker.js')
+    })
+}
 
 window.addEventListener('load', function () {
     initDb()
